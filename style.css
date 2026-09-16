@@ -1,0 +1,275 @@
+/* Variables de Colores basadas en tu logo */
+:root {
+    --primary-color: #72C3EA; /* Azul cielo */
+    --secondary-color: #8CC63F; /* Verde jardín */
+    --text-color: #333333;
+    --light-bg: #f9f9f9;
+    --dark-bg: #222222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header y Navegación */
+header {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.logo-container h1 {
+    font-size: 1.5rem;
+    color: var(--dark-bg);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Secciones Generales */
+.section {
+    padding: 80px 10%;
+}
+.bg-light { background-color: var(--light-bg); }
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+.subtitle {
+    text-align: center;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(114, 195, 234, 0.8), rgba(140, 198, 63, 0.8)), url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover { background-color: #7ab32e; }
+
+/* Grid Generico */
+.grid-container, .nosotros-grid, .instalaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjetas */
+.card, .servicio-item, .inst-item, .testimonio {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.servicio-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Actividades */
+.actividades-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.actividades-list li {
+    background: white;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.actividades-list li i { color: var(--secondary-color); font-size: 1.5rem;}
+
+/* Testimonios */
+.testimonio p { font-style: italic; margin-bottom: 15px; }
+.testimonio h4 { color: var(--primary-color); }
+
+/* Galería */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.galeria-grid img:hover { transform: scale(1.05); }
+
+/* Contacto */
+.contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.info-contacto p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.info-contacto a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.redes-sociales { margin-top: 30px; }
+.redes-sociales a {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+.redes-sociales i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario input, .formulario textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-bg);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive (Celulares) */
+@media (max-width: 768px) {
+    header { padding: 10px 20px; }
+    .menu-toggle { display: block; }
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+    }
+    nav.active { display: block; }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+    }
+    nav ul li { padding: 15px 0; border-bottom: 1px solid #eee; }
+    .hero h2 { font-size: 2rem; }
+    .contacto-container { grid-template-columns: 1fr; }
+}
