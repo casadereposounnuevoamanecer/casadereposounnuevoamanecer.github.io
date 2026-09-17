@@ -40,13 +40,14 @@ header {
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 110px;      /* Puedes aumentar este número si lo quieres aún más grande */
+    height: 110px;     /* Este número debe ser igual al de arriba */
+    border-radius: 50%; 
+    object-fit: cover; /* Mantiene la imagen proporcionada */
 }
 
 .logo-container h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--dark-bg);
 }
 
@@ -95,49 +96,71 @@ h2 {
     color: #666;
 }
 
+
 /* Hero Section */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(114, 195, 234, 0.8), rgba(140, 198, 63, 0.8)), url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover;
+    background-attachment: fixed;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
-    padding-top: 80px;
+    padding-top: 150px; /* Compensa la altura del logo grande para no chocar */
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero h2 {
     color: white;
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
 }
 
+/* El botón del inicio - ¡AQUÍ LO RECUPERAMOS Y MEJORAMOS! */
 .btn {
+    display: inline-block; 
     background-color: var(--secondary-color);
     color: white;
-    padding: 12px 30px;
+    padding: 15px 40px;
     text-decoration: none;
     font-size: 1.2rem;
-    border-radius: 25px;
+    border-radius: 30px;
     font-weight: bold;
     border: none;
     cursor: pointer;
-    transition: background 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.btn:hover { background-color: #7ab32e; }
+.btn:hover { 
+    background-color: #7ab32e; 
+    transform: translateY(-4px); /* Hará que el botón "salte" al pasar el ratón */
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 /* Grid Generico */
 .grid-container, .nosotros-grid, .instalaciones-grid {
@@ -250,6 +273,8 @@ footer {
     padding: 20px;
 }
 
+
+
 /* Responsive (Celulares) */
 @media (max-width: 768px) {
     header { padding: 10px 20px; }
@@ -257,7 +282,7 @@ footer {
     nav {
         display: none;
         position: absolute;
-        top: 70px;
+        top: 100px; /* Bajado para tu nuevo logo grande */
         left: 0;
         width: 100%;
         background: white;
@@ -270,6 +295,10 @@ footer {
         gap: 0;
     }
     nav ul li { padding: 15px 0; border-bottom: 1px solid #eee; }
+    
+    /* Asegurarnos de que no rompa las letras en celuar */
+    .hero { padding-top: 180px; } 
     .hero h2 { font-size: 2rem; }
+    .hero p { font-size: 1.1rem; }
     .contacto-container { grid-template-columns: 1fr; }
 }
