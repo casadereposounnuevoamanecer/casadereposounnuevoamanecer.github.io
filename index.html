@@ -16,7 +16,7 @@
             <img src="logo.jpg" alt="Logo Un Nuevo Amanecer" class="logo">
             <h1>Un Nuevo Amanecer</h1>
         </div>
-        <button class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú"><i class="fas fa-bars" ></i></button>
         <nav id="nav-menu">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -68,9 +68,11 @@
                 <p>Control médico constante y personal de enfermería disponible las 24 horas para garantizar la salud y seguridad del residente.</p>
                 <!-- Mini Galería para este servicio -->
                 <div class="mini-galeria-servicio">
-                    <img src="medica1.jpg" alt="Atención médica a adultos mayores">
-                    <img src="medica2.jpg" alt="Enfermera cuidando paciente">
-                    <img src="medica3.jpg" alt="Toma de presión paciente">
+                    <img src="medica1.jpg" alt="Atención médica a adultos mayores" loading="lazy">
+                    <img src="medica2.jpg" alt="Enfermera cuidando paciente" loading="lazy">
+                    <img src="medica3.jpg" alt="Toma de presión paciente" loading="lazy">
+
+
                 </div>
             </div>
             <div class="servicio-item">
@@ -110,9 +112,15 @@
                 <h3>Diseño Accesible</h3>
                 <p>Contamos con una amplia casa de 1 solo piso, sin escaleras peligrosas, diseñada para el libre y seguro tránsito de adultos mayores, sillas de ruedas y andadores.</p>
             </div>
-            <div class="inst-item">
+           <div class="inst-item">
                 <h3>Patio y Amplio Jardín</h3>
                 <p>Hermosas áreas verdes ideales para el esparcimiento. En nuestro jardín y patio llevamos a cabo las terapias físicas al aire libre, aprovechando el sol de Chaclacayo.</p>
+                <!-- Mini Galería del Patio (Tus 3 fotos) -->
+                <div class="mini-galeria-servicio">
+                    <img src="patio1.jpg" alt="Pacientes relajándose en el patio" loading="lazy">
+                    <img src="patio2.jpg" alt="Adultos mayores disfrutando del sol en Chaclacayo" loading="lazy">
+                    <img src="patio3.jpg" alt="Terapias al aire libre en casa de reposo" loading="lazy">
+                </div>
             </div>
             <div class="inst-item">
                 <h3>Sala de Estar Entretenida</h3>
@@ -124,8 +132,8 @@
                 <p>Ofrecemos habitaciones muy amplias, iluminadas y ventiladas, con opción a ser compartidas o individuales según la preferencia y necesidad de la familia.</p>
                 <!-- Galería de los cuartos -->
                 <div class="mini-galeria-servicio" style="justify-content: space-between;">
-                    <img src="cuarto1.jpg" alt="Cuarto amplio e iluminado" style="width: 48%; height: 120px;">
-                    <img src="cuarto2.jpg" alt="Habitación para residente de casa de reposo" style="width: 48%; height: 120px;">
+                    <img src="cuarto1.jpg" alt="Cuarto amplio e iluminado" style="width: 48%; height: 120px;" loading="lazy">
+                    <img src="cuarto2.jpg" alt="Habitación para residente de casa de reposo" style="width: 48%; height: 120px;" loading="lazy">
                 </div>
             </div>
 
@@ -179,77 +187,122 @@
         <!-- Álbum 1: Primavera -->
         <h3 style="text-align: center; color: var(--secondary-color); margin-bottom: 20px; font-size: 2rem;">Llegada de la Primavera en Chaclacayo 🌺</h3>
         <div class="galeria-grid" style="margin-bottom: 50px;">
-            <img src="primavera1.jpg" alt="Abuelitos disfrutando del sol en Chaclacayo">
-            <img src="primavera2.jpg" alt="Primavera en la casa de reposo">
-            <img src="primavera3.jpg" alt="Jardín y áreas verdes en geriatría">
-            <img src="primavera4.jpg" alt="Residentes felices en los jardines">
-            <img src="primavera5.jpg" alt="Terapias al aire libre">
-            <img src="primavera6.jpg" alt="Disfrutando de las plantas">
-            <img src="primavera7.jpg" alt="Cuidado de adultos mayores al aire libre">
-            <img src="primavera8.jpg" alt="Descanso bajo el sol primaveral">
-            <img src="primavera9.jpg" alt="Envejecimiento digno en un hermoso clima">
-            <img src="primavera10.jpg" alt="Juegos de mesa en el patio">
-            <img src="primavera11.jpg" alt="Ejercicios al aire libre Chaclacayo">
-            <img src="primavera12.jpg" alt="Paseo de pacientes y personal médico">
-            <img src="primavera13.jpg" alt="Primavera cálida Un Nuevo Amanecer">
-            <img src="primavera14.jpg" alt="Descanso y calidad de vida">
-            <img src="primavera15.jpg" alt="Tranquilidad y aire puro">
-            <img src="primavera16.jpg" alt="Patio florido para actividades recreativas">
-            <img src="primavera17.jpg" alt="Integración con la naturaleza">
-            <img src="primavera18.jpg" alt="Tratamientos post ACV en ambientes externos">
-            <img src="primavera19.jpg" alt="Mucha vegetación e iluminación">
-            <img src="primavera20.jpg" alt="Rehabilitación geriatría clima sano">
-            <img src="primavera21.jpg" alt="Casa familiar para tercera edad Lima Este">
+            <img src="primavera1.jpg" alt="Abuelitos disfrutando del sol en Chaclacayo" loading="lazy">
+            <img src="primavera2.jpg" alt="Primavera en la casa de reposo" loading="lazy">
+            <img src="primavera3.jpg" alt="Jardín y áreas verdes en geriatría" loading="lazy">
+            <img src="primavera4.jpg" alt="Residentes felices en los jardines" loading="lazy">
+            <img src="primavera5.jpg" alt="Terapias al aire libre" loading="lazy">
+            <img src="primavera6.jpg" alt="Disfrutando de las plantas" loading="lazy">
+            <img src="primavera7.jpg" alt="Cuidado de adultos mayores al aire libre" loading="lazy">
+            <img src="primavera8.jpg" alt="Descanso bajo el sol primaveral" loading="lazy">
+            <img src="primavera9.jpg" alt="Envejecimiento digno en un hermoso clima" loading="lazy">
+            <img src="primavera10.jpg" alt="Juegos de mesa en el patio" loading="lazy">
+            <img src="primavera11.jpg" alt="Ejercicios al aire libre Chaclacayo" loading="lazy">
+            <img src="primavera12.jpg" alt="Paseo de pacientes y personal médico" loading="lazy">
+            <img src="primavera13.jpg" alt="Primavera cálida Un Nuevo Amanecer" loading="lazy">
+            <img src="primavera14.jpg" alt="Descanso y calidad de vida" loading="lazy">
+            <img src="primavera15.jpg" alt="Tranquilidad y aire puro" loading="lazy">
+            <img src="primavera16.jpg" alt="Patio florido para actividades recreativas" loading="lazy">
+            <img src="primavera17.jpg" alt="Integración con la naturaleza" loading="lazy">
+            <img src="primavera18.jpg" alt="Tratamientos post ACV en ambientes externos" loading="lazy">
+            <img src="primavera19.jpg" alt="Mucha vegetación e iluminación" loading="lazy">
+            <img src="primavera20.jpg" alt="Rehabilitación geriatría clima sano" loading="lazy">
+            <img src="primavera21.jpg" alt="Casa familiar para tercera edad Lima Este" loading="lazy">
         </div>
 
         <!-- Álbum 2: Cumpleaños -->
         <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 20px; font-size: 2rem;">Nuestros Cumpleaños 🎂</h3>
         <div class="galeria-grid">
-            <img src="cumple1.jpg" alt="Cumpleaños feliz en la casa de reposo">
-            <img src="cumple2.jpg" alt="Celebración con torta para el adulto mayor">
-            <img src="cumple3.jpg" alt="Cumpleaños y musicoterapia">
-            <img src="cumple4.jpg" alt="Festejando la vida">
-            <img src="cumple5.jpg" alt="Personal celebrando cumpleaños">
-            <img src="cumple6.jpg" alt="Abuelitos compartiendo">
-            <img src="cumple7.jpg" alt="Cuidado con amor y empatía">
-            <img src="cumple8.jpg" alt="Alegría familiar en Chaclacayo">
-            <img src="cumple9.jpg" alt="Fiesta y vida social geriátrica">
-            <img src="cumple10.jpg" alt="Envejecimiento digno y feliz">
+            <img src="cumple1.jpg" alt="Cumpleaños feliz en la casa de reposo" loading="lazy">
+            <img src="cumple2.jpg" alt="Celebración con torta para el adulto mayor" loading="lazy">
+            <img src="cumple3.jpg" alt="Cumpleaños y musicoterapia" loading="lazy">
+            <img src="cumple4.jpg" alt="Festejando la vida" loading="lazy">
+            <img src="cumple5.jpg" alt="Personal celebrando cumpleaños" loading="lazy">
+            <img src="cumple6.jpg" alt="Abuelitos compartiendo" loading="lazy">
+            <img src="cumple7.jpg" alt="Cuidado con amor y empatía" loading="lazy">
+            <img src="cumple8.jpg" alt="Alegría familiar en Chaclacayo" loading="lazy">
+            <img src="cumple9.jpg" alt="Fiesta y vida social geriátrica" loading="lazy">
+            <img src="cumple10.jpg" alt="Envejecimiento digno y feliz" loading="lazy">
         </div>
 
 
 <!-- Álbum 3: Manualidades -->
         <h3 style="text-align: center; color: #f59a23; margin-top: 50px; margin-bottom: 20px; font-size: 2rem;">Manualidades y Terapia Ocupacional 🎨</h3>
         <div class="galeria-grid">
-            <img src="manualidades1.jpg" alt="Terapia ocupacional para el Alzheimer">
-            <img src="manualidades2.jpg" alt="Adultos mayores haciendo manualidades">
-            <img src="manualidades3.jpg" alt="Pintura y estimulación cognitiva geriatría">
-            <img src="manualidades4.jpg" alt="Destreza mental con manualidades">
-            <img src="manualidades5.jpg" alt="Prevención de demencia senil Chaclacayo">
-            <img src="manualidades6.jpg" alt="Abuelitos dibujando y creando">
-            <img src="manualidades7.jpg" alt="Actividad recreativa en casa de reposo">
-            <img src="manualidades8.jpg" alt="Trabajo manual para el Parkinson">
-            <img src="manualidades9.jpg" alt="Terapias para el buen humor geriátrico">
-            <img src="manualidades10.jpg" alt="Residentes pintando juntos">
-            <img src="manualidades11.jpg" alt="Desarrollo de psicomotricidad fina">
-            <img src="manualidades12.jpg" alt="Juegos de memoria y arte mayores">
-            <img src="manualidades13.jpg" alt="Programa de envejecimiento activo">
-            <img src="manualidades14.jpg" alt="Enfermeras acompañando terapias de arte">
-            <img src="manualidades15.jpg" alt="Felicidad y vida digna manualidades">
-            <img src="manualidades16.jpg" alt="Concentración mental con pinturas">
-            <img src="manualidades17.jpg" alt="Artes y letras en la tercera edad">
-            <img src="manualidades18.jpg" alt="Amor y dedicación al adulto mayor Un Nuevo Amanecer">
+            <img src="manualidades1.jpg" alt="Terapia ocupacional para el Alzheimer" loading="lazy">
+            <img src="manualidades2.jpg" alt="Adultos mayores haciendo manualidades" loading="lazy">
+            <img src="manualidades3.jpg" alt="Pintura y estimulación cognitiva geriatría" loading="lazy">
+            <img src="manualidades4.jpg" alt="Destreza mental con manualidades" loading="lazy">
+            <img src="manualidades5.jpg" alt="Prevención de demencia senil Chaclacayo" loading="lazy">
+            <img src="manualidades6.jpg" alt="Abuelitos dibujando y creando" loading="lazy">
+            <img src="manualidades7.jpg" alt="Actividad recreativa en casa de reposo" loading="lazy">
+            <img src="manualidades8.jpg" alt="Trabajo manual para el Parkinson" loading="lazy">
+            <img src="manualidades9.jpg" alt="Terapias para el buen humor geriátrico" loading="lazy">
+            <img src="manualidades10.jpg" alt="Residentes pintando juntos" loading="lazy">
+            <img src="manualidades11.jpg" alt="Desarrollo de psicomotricidad fina" loading="lazy">
+            <img src="manualidades12.jpg" alt="Juegos de memoria y arte mayores" loading="lazy">
+            <img src="manualidades13.jpg" alt="Programa de envejecimiento activo" loading="lazy">
+            <img src="manualidades14.jpg" alt="Enfermeras acompañando terapias de arte" loading="lazy">
+            <img src="manualidades15.jpg" alt="Felicidad y vida digna manualidades" loading="lazy">
+            <img src="manualidades16.jpg" alt="Concentración mental con pinturas" loading="lazy">
+            <img src="manualidades17.jpg" alt="Artes y letras en la tercera edad" loading="lazy">
+            <img src="manualidades18.jpg" alt="Amor y dedicación al adulto mayor Un Nuevo Amanecer" loading="lazy">
 
             
             
             <!-- Nuevas fotos de pintura agregadas a Manualidades -->
-            <img src="pintura1.jpg" alt="Pacientes abuelitos pintando lienzos con pincel">
-            <img src="pintura2.jpg" alt="Terapia de arte y pintura en Chaclacayo">
-            <img src="pintura3.jpg" alt="Relajación y terapia ocupacional pintando">
-            <img src="pintura4.jpg" alt="Clase de pintura para la tercera edad">
-            <img src="pintura5.jpg" alt="Estimulación de motricidad fina con pinturas">
+            <img src="pintura1.jpg" alt="Pacientes abuelitos pintando lienzos con pincel" loading="lazy">
+            <img src="pintura2.jpg" alt="Terapia de arte y pintura en Chaclacayo" loading="lazy">
+            <img src="pintura3.jpg" alt="Relajación y terapia ocupacional pintando" loading="lazy">
+            <img src="pintura4.jpg" alt="Clase de pintura para la tercera edad" loading="lazy">
+            <img src="pintura5.jpg" alt="Estimulación de motricidad fina con pinturas" loading="lazy">
+
+           <!-- Videos de Manualidades -->
+        <h3 style="text-align: center; color: #f59a23; margin-top: 40px; margin-bottom: 20px; font-size: 1.8rem;">¡Mira a nuestros residentes en acción! 🎥</h3>
+        
+        <!-- Contenedor de los videos -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; padding-bottom: 40px;">
+            
+            <!-- Video 1 -->
+           <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2025106551659739%2F&show_text=true&width=267&t=0" width="267" height="591" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+
+            
+            <!-- Video 2 -->
+           <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1303167647919862%2F&show_text=true&width=267&t=0" width="267" height="591" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
         </div>
 
+
+
+        </div>
+
+        
+        <!-- Álbum 4: Pacientes Alegres -->
+        <h3 style="text-align: center; color: var(--primary-color); margin-top: 50px; margin-bottom: 20px; font-size: 2rem;">Momentos de Alegría 😄</h3>
+        <p class="subtitle" style="margin-top: 0; margin-bottom: 30px;">La sonrisa de nuestros residentes es nuestro mayor orgullo.</p>
+        <div class="galeria-grid">
+            <img src="alegria1.jpg" alt="Paciente adulto mayor feliz y sonriente" loading="lazy">
+            <img src="alegria2.jpg" alt="Abuelitos alegres en la casa de reposo" loading="lazy">
+            <img src="alegria3.jpg" alt="Sonrisas y calidad de vida en Chaclacayo" loading="lazy">
+            <img src="alegria4.jpg" alt="Atención geriátrica con amor y alegría" loading="lazy">
+        </div>
+
+<!-- Álbum 5: Patio y Aire Libre -->
+        <h3 style="text-align: center; color: var(--secondary-color); margin-top: 50px; margin-bottom: 20px; font-size: 2rem;">Tardes en el Patio 🌳</h3>
+        <div class="galeria-grid">
+            <img src="patio1.jpg" alt="Pacientes relajándose en el patio" loading="lazy">
+            <img src="patio2.jpg" alt="Adultos mayores disfrutando del sol en Chaclacayo" loading="lazy">
+            <img src="patio3.jpg" alt="Terapias al aire libre en casa de reposo" loading="lazy">
+        </div>
+
+        <!-- Álbum: Cuidado y Dedicación (Enfermeras) -->
+        <h3 style="text-align: center; color: var(--primary-color); margin-top: 50px; margin-bottom: 20px; font-size: 2rem;">Cuidado, Amor y Dedicación 👩‍⚕️</h3>
+        <p class="subtitle" style="margin-top: 0; margin-bottom: 30px;">Nuestro personal especializado brindando la mejor atención a cada residente.</p>
+        <div class="galeria-grid">
+            <img src="enfermera1.jpg" alt="Enfermera cuidando con amor a paciente adulto mayor" loading="lazy">
+            <img src="enfermera2.jpg" alt="Personal de salud interactuando con paciente" loading="lazy">
+            <img src="enfermera3.jpg" alt="Atención médica y cariño en casa de reposo" loading="lazy">
+            <img src="enfermera4.jpg" alt="Enfermera y abuelito sonriendo juntos" loading="lazy">
+            <img src="enfermera5.jpg" alt="Asistencia y cuidado geriátrico profesional" loading="lazy">
         </div>
 
 
