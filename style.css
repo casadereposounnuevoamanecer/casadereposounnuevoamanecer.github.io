@@ -324,3 +324,81 @@ footer {
     .hero p { font-size: 1.1rem; }
     .contacto-container { grid-template-columns: 1fr; }
 }
+
+html {
+    scroll-behavior: smooth; /* Para que baje de forma suave / animada */
+    scroll-padding-top: 130px; /* Compensa el alto de tu menú fijo */
+}
+/* =========================================
+   DISEÑO ESTÉTICO PARA VIDEOS VERTICALES (REELS JUNTOS)
+   ========================================= */
+.videos-container {
+    display: flex;
+    justify-content: center; /* Los empuja hacia el centro */
+    gap: 20px; /* ¡Esta es la distancia entre ambos videos! (muy cerquita) */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 50px 20px;
+}
+
+.video-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* Sombra elegante */
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 320px; /* Fija el tamaño para que no se alejen el uno del otro */
+}
+
+.video-card:hover {
+    transform: translateY(-5px); /* Efecto de que flota al pasar el mouse */
+}
+
+.video-card h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.video-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Ajuste perfecto para videos tipo Facebook Reels */
+.reel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 240px; /* Ancho del video */
+    margin: 0 auto; /* Centra el video dentro de su tarjeta blanca */
+    aspect-ratio: 9 / 16; /* Proporción exacta de celular */
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.reel-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Ajuste para que en celulares se ponga uno debajo del otro */
+@media (max-width: 768px) {
+    .videos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .video-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
