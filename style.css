@@ -184,23 +184,23 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Mini galería para Servicios */
+/* Mini galería adaptable (para que entren 2, 3, 4 o 5 fotos perfectas) */
 .mini-galeria-servicio {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 8px;
     margin-top: 20px;
 }
 
 .mini-galeria-servicio img {
-    width: 32%; /* Reparte el espacio exactamente para 3 fotos */
+    flex: 1; /* ¡Magia! Se achican o agrandan según cuántas pongas */
+    min-width: 0; /* Evita que las fotos rompan la tarjeta */
     height: 80px; 
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
 }
-
 .mini-galeria-servicio img:hover {
     transform: scale(1.15); /* Crece la fotito si alguien la toca o pone el mouse arriba */
 }
