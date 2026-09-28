@@ -578,3 +578,27 @@ html {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+/* =========================================
+   FIRMA DEL CREADOR (MABU PAGES)
+   ========================================= */
+.mabu-firma {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #cccccc; /* Gris clarito para no robar tanta atención */
+    letter-spacing: 0.5px;
+}
+
+.mabu-firma a {
+    color: var(--primary-color); /* Color Azul cielo del diseño */
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima de 'Mabu Pages' */
+.mabu-firma a:hover {
+    color: var(--secondary-color); /* Cambia al Verde jardín */
+    text-shadow: 0 0 10px rgba(140, 198, 63, 0.4);
+}
