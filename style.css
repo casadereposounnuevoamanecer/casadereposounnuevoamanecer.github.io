@@ -602,3 +602,58 @@ html {
     color: var(--secondary-color); /* Cambia al Verde jardín */
     text-shadow: 0 0 10px rgba(140, 198, 63, 0.4);
 }
+
+/* =========================================
+   BARRA DE DESPLAZAMIENTO ESTILIZADA (SCROLLBAR)
+   ========================================= */
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color); 
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color); /* Al usarla se pone verde */
+}
+
+/* =========================================
+   EFECTO DE LEVITACIÓN Y BRILLO EN TARJETAS
+   ========================================= */
+/* Levitación de las cajas */
+.card, .servicio-item, .inst-item {
+    transition: all 0.4s ease-in-out;
+    border: 1px solid transparent;
+}
+.card:hover, .servicio-item:hover, .inst-item:hover {
+    transform: translateY(-10px); /* La tarjeta flota hacia arriba */
+    box-shadow: 0 15px 30px rgba(114, 195, 234, 0.2); /* Sombra azuladita elegante */
+    border-color: rgba(140, 198, 63, 0.3); /* Borde verde sutil */
+}
+
+/* Efecto rebote suave a los iconos cuando pones el ratón */
+.card:hover h3 i, .servicio-item:hover i {
+    transform: scale(1.2) translateY(-5px);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: var(--secondary-color);
+}
+
+/* =========================================
+   TÍTULOS CON DEGRADADO CORPORATIVO
+   ========================================= */
+h2 {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding-bottom: 5px; /* Evita cortes feos en la letra */
+}
+/* Centrando de nuevo porque al volverlos gradientes cambiamos su modo de mostrar */
+.section h2 {
+    display: block; 
+    margin: 0 auto 40px auto;
+}
