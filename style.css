@@ -657,3 +657,131 @@ h2 {
     display: block; 
     margin: 0 auto 40px auto;
 }
+
+/* =========================================
+   EFECTO VIDRIO ESMERILADO EN EL MENÚ (GLASSMORPHISM)
+   ========================================= */
+header {
+    background-color: rgba(255, 255, 255, 0.75) !important; /* Blanco semitransparente */
+    backdrop-filter: blur(12px); /* Esto hace el efecto cristal/vidrio */
+    -webkit-backdrop-filter: blur(12px); /* Soporte para Safari/Iphone */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Brillito tenue en el borde */
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   FORMULARIO ELEGANTE Y FLUIDO
+   ========================================= */
+.formulario input, .formulario textarea {
+    transition: all 0.3s ease;
+    border: 1.5px solid #eaeaea !important;
+    background-color: #fafafa;
+}
+
+/* Al tocar para escribir */
+.formulario input:focus, .formulario textarea:focus {
+    outline: none;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 12px rgba(114, 195, 234, 0.4);
+    transform: scale(1.02); /* Se acerca muy poquito al cliente */
+    background-color: #ffffff;
+}
+
+/* =========================================
+   BOTONES LLAMATIVOS CON DESTELLO DE LUZ
+   ========================================= */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Crea un "rayo de luz" blanco encima del botón */
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-25deg);
+    animation: destello-boton 4s infinite;
+}
+
+@keyframes destello-boton {
+    0% { left: -100%; }
+    15% { left: 200%; } /* Pasa volando rápidamente */
+    100% { left: 200%; } /* Espera unos segundos y se repite */
+}
+
+/* =========================================
+   PANTALLA DE CARGA (PRELOADER ANIMADO)
+   ========================================= */
+#pantalla-carga {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #ffffff;
+    z-index: 999999; /* Por encima de todo, para tapar mientras carga */
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.cargador-mabu {
+    width: 60px; height: 60px;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid var(--primary-color);
+    border-bottom: 6px solid var(--secondary-color);
+    border-radius: 50%;
+    animation: giro-cargador 1s linear infinite;
+}
+@keyframes giro-cargador {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Esta clase oculta el fondo blanco cuando termina de cargar */
+.ocultar-pantalla {
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* =========================================
+   TESTIMONIOS ESTILO AGENCIA Y 3D
+   ========================================= */
+.testimonio {
+    position: relative;
+    overflow: hidden; /* Impide que la comilla enorme se desborde del recuadro */
+    z-index: 1;
+}
+.testimonio::after {
+    content: '\f10e'; /* El símbolo secreto de comillas de tu FontAwesome */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    bottom: -20px;
+    right: 5px;
+    font-size: 8rem; /* Tamaño ENORME */
+    color: rgba(114, 195, 234, 0.05); /* Casi transparente (Solo sombra marca de agua) */
+    z-index: -1;
+    transform: rotate(-10deg);
+    transition: all 0.4s ease;
+}
+
+/* Efecto Mágico: Pasa el mouse, la comilla gigante gira, crece y cambia a Verde Jardín! */
+.testimonio:hover::after {
+    color: rgba(140, 198, 63, 0.12);
+    transform: rotate(0deg) scale(1.1);
+}
+
+/* =========================================
+   ACTIVIDADES DIARIAS - INTERACTIVAS "EFECTO ESCALÓN"
+   ========================================= */
+.actividades-list li {
+    transition: transform 0.3s ease, border-left 0.3s ease, background-color 0.3s ease;
+    border-left: 0px solid transparent; /* invisible por ahora */
+}
+/* Efecto de pasito al lado (Slide step effect) */
+.actividades-list li:hover {
+    transform: translateX(12px); /* La caja se desliza solita 12 px a la derecha */
+    border-left: 6px solid var(--secondary-color); /* Rayita vertical iluminando lado izquierdo */
+    background-color: #f7fcff; /* Fondo sutilmente cielo pálido */
+}
