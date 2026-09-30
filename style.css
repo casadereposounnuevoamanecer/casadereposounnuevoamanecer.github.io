@@ -785,3 +785,43 @@ header {
     border-left: 6px solid var(--secondary-color); /* Rayita vertical iluminando lado izquierdo */
     background-color: #f7fcff; /* Fondo sutilmente cielo pálido */
 }
+
+/* =========================================
+   TITULO Y MENÚ LAPTOP 100% CENTRADOS 
+   ========================================= */
+
+/* Hacemos que el Título al lado del logo sea 2 líneas apiladas en el centro */
+.titulo-menu {
+    text-align: center;      /* Pone Casa de reposo centradito */
+    line-height: 1.1;
+    font-size: 1.6rem;
+    color: var(--dark-bg);
+    margin-left: 10px;       /* Un pequeñísimo margen para respirar con tu logote redondo */
+}
+/* Al 'Un Nuevo Amanecer' le damos tu tono institucional Verde Jardín! (Se verá Premium) */
+.titulo-menu span {
+    font-size: 1.9rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Efecto Inteligente: Cuando el diseño abra en tu computadora/laptop 💻 */
+@media screen and (min-width: 900px) {
+    header {
+        justify-content: flex-start !important; 
+    }
+    
+    /* Agarramos toda la botonera completa donde están los servicios/galería y... */
+    nav#nav-menu {
+        flex-grow: 1;                 /* ¡Le quitamos los candados al lado derecho! */
+        display: flex;
+        justify-content: center;      /* Y LOS COLOCAMOS MAGISTRALMENTE EN EL CENTRO! */
+        padding-right: 50px;          /* Empuja poquitín para un balance visual exquisito */
+    }
+    
+    /* Separamos apenas las palabras del menú entre sí para la lectura elegante de adultos */
+    nav ul {
+        gap: 25px; 
+    }
+}
