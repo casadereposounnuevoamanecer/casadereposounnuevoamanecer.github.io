@@ -330,17 +330,17 @@ html {
     scroll-padding-top: 130px; /* Compensa el alto de tu menú fijo */
 }
 /* =========================================
-   DISEÑO ESTÉTICO PARA VIDEOS VERTICALES (REELS JUNTOS)
+   DISEÑO ESTÉTICO PARA VIDEOS VERTICALES (REELS/SHORTS JUNTOS)
    ========================================= */
 .videos-container {
     display: flex;
-    justify-content: center; /* Los empuja hacia el centro */
-    gap: 20px; /* ¡Esta es la distancia entre ambos videos! (muy cerquita) */
-    max-width: 800px;
+    flex-wrap: wrap; /* ¡MAGIA! Esto permite poner múltiples tarjetas, pasando abajo las sobrantes. */
+    justify-content: center;
+    gap: 20px; 
+    max-width: 1300px; /* Extendemos su caja contenedora por que serán muchos videos */
     margin: 0 auto;
     padding: 0 20px 50px 20px;
 }
-
 .video-card {
     background: white;
     padding: 20px;
