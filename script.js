@@ -85,9 +85,8 @@ const observarAparicion = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1 }); // Se activa cuando al menos el 10% es visible
 
-// Seleccionamos todo lo que queremos animar (Todas las tarjetas, servicios y fotos)
-const elementosAAnimar = document.querySelectorAll('.card, .servicio-item, .inst-item, .video-card, .testimonio, .galeria-grid img');
-
+// Excluimos las .video-card de aquí para que en el celular los videos puedan cargarse libres sin bloqueo de opacidad
+const elementosAAnimar = document.querySelectorAll('.card, .servicio-item, .inst-item, .testimonio, .galeria-grid img');
 elementosAAnimar.forEach(el => {
     el.classList.add('oculto-al-inicio'); // Los ocultamos de golpe al cargar
     observarAparicion.observe(el);        // El observador espera a que bajes
