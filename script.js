@@ -92,19 +92,3 @@ elementosAAnimar.forEach(el => {
     observarAparicion.observe(el);        // El observador espera a que bajes
 });
 
-// ==================================================
-// ESCONDER PANTALLA DE CARGA (VERSIÓN FORZADA RÁPIDA)
-// ==================================================
-const pantallaCarga = document.getElementById('pantalla-carga');
-
-// Regla 1: Ocultar rápido si el contenido inicial ya se leyó (sin esperar a los pesados videos de Facebook)
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-        pantallaCarga.classList.add('ocultar-pantalla');
-    }, 1000); // Desaparece al primer segundo exacto
-});
-
-// Regla 2 (Modo Seguro): Por si el internet falla, a los 2.5 segundos máximos la quita SÍ o SÍ obligatoriamente.
-setTimeout(function() {
-    pantallaCarga.classList.add('ocultar-pantalla');
-}, 2500);
