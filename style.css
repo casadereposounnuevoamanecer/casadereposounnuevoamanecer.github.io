@@ -778,25 +778,39 @@ header {
     -webkit-text-fill-color: transparent;
 }
 
-/* Efecto Inteligente: Cuando el diseño abra en tu computadora/laptop 💻 */
+/* Efecto Inteligente: MODO MENÚ A LA DERECHA (Mabu Pages Pro) 💻 */
 @media screen and (min-width: 900px) {
     header {
-        justify-content: flex-start !important; 
+        /* Separa el Logo a la extrema izquierda y el menú a la extrema derecha */
+        justify-content: space-between !important; 
+        padding: 10px 60px !important; /* Respiro en los bordes de la pantalla */
     }
     
-    /* Agarramos toda la botonera completa donde están los servicios/galería y... */
     nav#nav-menu {
-        flex-grow: 1;                 /* ¡Le quitamos los candados al lado derecho! */
+        flex-grow: 1;                 
         display: flex;
-        justify-content: center;      /* Y LOS COLOCAMOS MAGISTRALMENTE EN EL CENTRO! */
-        padding-right: 50px;          /* Empuja poquitín para un balance visual exquisito */
+        /* AQUÍ LA MAGIA: Enviamos toda la botonera a la DERECHA */
+        justify-content: flex-end;      
     }
     
-    /* Separamos apenas las palabras del menú entre sí para la lectura elegante de adultos */
     nav ul {
-        gap: 25px; 
+        gap: 22px; /* Damos buena separación entre las 8 palabras */
+        transform: none; /* Le quitamos cualquier truco de centrado óptico que tenía */
+    }
+    
+    nav ul li a {
+        font-size: 1rem; /* Regresamos a un tamaño elegante y claro */
+        letter-spacing: 0.3px;
+        transition: color 0.4s ease;
+        font-weight: 600;
     }
 }
+
+
+
+
+
+
 
 /* =========================================
    CURVA ANIMADA EN EL ENCABEZADO "LA OLA"
@@ -856,4 +870,57 @@ header {
 }
 .logo:hover {
     transform: scale(1.15) rotate(-5deg); /* Saluda ligeramente cuando pasan su puntero */
+}
+
+/* =========================================
+   TEXTO DIAMANTE (SHINE INFINITO EN EL TITULO)
+   ========================================= */
+.hero h2 {
+    background: linear-gradient(90deg, #ffffff 0%, #a2deff 50%, #ffffff 100%); /* Cruce de Plata a Cielo */
+    background-size: 200% auto;
+    color: #fff; /* Fallback seguro */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none; /* Sustituimos el sombreado antiguo por un drop-shadow que sí es compatible */
+    filter: drop-shadow(3px 4px 5px rgba(0,0,0,0.7)); 
+    animation: letras-relucientes 5s linear infinite; /* Magia corriendo sin fin */
+}
+@keyframes letras-relucientes {
+    to { background-position: 200% center; } /* Pasea la barra de color fluido */
+}
+
+/* =========================================
+   MODO CINE (ENFOQUE AL LEER OPINIONES FAMILIARES)
+   ========================================= */
+#testimonios .grid-container {
+    transition: all 0.5s ease;
+}
+/* Cuando pasas el mouse por LA ZONA, desenfocamos TODOS LOS CUADROS primero */
+#testimonios .grid-container:hover .testimonio {
+    filter: blur(4px) grayscale(60%); 
+    opacity: 0.5;
+    transform: scale(0.97); /* Hunden pequeñísimamente */
+}
+/* EXCEPTO ESE MISMÍSIMO sobre el que SÍ Tienes posada la mano/puntero!! Ese despierta!! */
+#testimonios .grid-container .testimonio:hover {
+    filter: blur(0) grayscale(0%);
+    opacity: 1;
+    transform: scale(1.08) translateY(-8px); /* Rompe esquemas saltando arriba limpio */
+    box-shadow: 0 20px 40px rgba(114, 195, 234, 0.4); /* Y proyectando este haz estelar desde su fondo */
+    z-index: 5;
+}
+
+/* =========================================
+   BOTON DEL FORMULARIO DINÁMICO MULTI-DEGRADADO 
+   ========================================= */
+.formulario .btn {
+    background: linear-gradient(45deg, var(--secondary-color), #20993c, #135d25, var(--secondary-color));
+    background-size: 300% auto; 
+    border: none;
+    box-shadow: 0 4px 15px rgba(140, 198, 63, 0.5); /* Eco de color neón debajo y por lados de sus bordes  */
+    transition: 0.5s ease; /* Sensibilidad hiper refinada de tiempo */
+}
+.formulario .btn:hover {
+    background-position: right center; /* Agitamos la cubeta Gradient por adentro a ritmo rápido!! */
+    box-shadow: 0 8px 30px rgba(140, 198, 63, 0.8);
 }
