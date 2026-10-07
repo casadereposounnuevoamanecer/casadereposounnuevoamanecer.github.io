@@ -797,3 +797,63 @@ header {
         gap: 25px; 
     }
 }
+
+/* =========================================
+   CURVA ANIMADA EN EL ENCABEZADO "LA OLA"
+   ========================================= */
+.hero { position: relative; } /* Prepara el terreno */
+.curva-hero {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.curva-hero svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px; /* Un nivelcito bonito de agua al fondo */
+    transition: transform 0.5s ease;
+}
+@media (min-width: 768px) {
+    .curva-hero svg { height: 95px; } /* En PC se levanta más la curvatura */
+}
+
+/* =========================================
+   ILUMINACIÓN HOVER (RESPLANDOR DE FOTOS ESTILO APP APPLE)
+   ========================================= */
+.galeria-grid img, .mini-galeria-servicio img {
+    border: 2px solid transparent;
+}
+/* Efecto de Encendido brillante + Levitación más fuerte */
+.galeria-grid img:hover, .mini-galeria-servicio img:hover {
+    filter: brightness(1.15) contrast(1.1) saturate(1.1);
+    transform: scale(1.08) translateY(-4px); 
+    border-color: rgba(140, 198, 63, 0.4); /* Bordecillo Verde Esmeralda mágico  */
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.15); 
+    z-index: 5;
+    position: relative;
+}
+
+/* =========================================
+   TEXTOS RESALTADOS/SOMBRADOS COLOR CORPORTATIVO MABU PAGES
+   ========================================= */
+::selection {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+::-moz-selection {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+/* =========================================
+   SUAVE OSCILACIÓN DEL LOGO OFICIAL
+   ========================================= */
+.logo {
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* El robot resorte */
+}
+.logo:hover {
+    transform: scale(1.15) rotate(-5deg); /* Saluda ligeramente cuando pasan su puntero */
+}
