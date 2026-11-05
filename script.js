@@ -33,7 +33,7 @@ fotos.forEach(foto => {
         modal.classList.add('activo'); // Aparece capa negra
         
         // ¡Magia!: Buscamos todas las "compañeras" que están dentro de esa misma caja/álbum
-        const contenedorCaja = this.closest('.galeria-grid, .mini-galeria-servicio');
+        const contenedorCaja = this.closest('.galeria-grid, .servicio-item, .inst-item, li');
         grupoActualFotos = Array.from(contenedorCaja.querySelectorAll('img'));
         
         // Buscamos en qué número de posición está la que tocaste (para poder saber cuál es la siguiente)

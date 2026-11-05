@@ -924,3 +924,13 @@ header {
     background-position: right center; /* Agitamos la cubeta Gradient por adentro a ritmo rápido!! */
     box-shadow: 0 8px 30px rgba(140, 198, 63, 0.8);
 }
+
+
+/* Permite que las fotos bajen solas si ya no entran arriba */
+.mini-galeria-servicio.multilinea {
+    flex-wrap: wrap; 
+}
+.mini-galeria-servicio.multilinea img {
+    flex: 1 1 calc(25% - 8px); /* Trata de acomodar 4 por fila */
+    min-width: 80px; /* Si la pantalla es muy chica, no las aplasta de más */
+}
